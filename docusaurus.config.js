@@ -98,36 +98,40 @@ module.exports = {
       },
       items: [
         {
-          to: "developer/",
+          to: "https://docs.celo.org/developer/",
           label: "Developers",
           position: "left",
         },
         {
-          to: "validator/",
+          to: "https://docs.celo.org/validator/",
           label: "Validators",
           position: "left",
         },
         {
-          to: "integration/",
+          to: "https://docs.celo.org/integration/",
           label: "Integrations",
           position: "left",
         },
-        { to: "showcase", label: "DApps", position: "left" },
         {
-          to: "/tutorials",
-          label: "Tutorials",
+          to: "https://docs.celo.org/showcase",
+          label: "DApps",
           position: "left",
         },
         {
-          type: "localeDropdown",
-          position: "right",
-          dropdownItemsAfter: [
-            {
-              to: "https://celo.crowdin.com/",
-              label: "Help us translate",
-            },
-          ],
+          to: "https://docs.celo.org/tutorials/",
+          label: "Tutorials",
+          position: "left",
         },
+        // {
+        //   type: "localeDropdown",
+        //   position: "right",
+        //   dropdownItemsAfter: [
+        //     {
+        //       to: "https://celo.crowdin.com/",
+        //       label: "Help us translate",
+        //     },
+        //   ],
+        // },
         {
           type: "dropdown",
           position: "right",
@@ -154,15 +158,15 @@ module.exports = {
               label: "Celo SDK",
             },
             {
-              to: "/developer/react-celo",
+              to: "https://docs.celo.org/developer/react-celo",
               label: "React-Celo",
             },
             {
-              to: "/developer/contractkit",
+              to: "https://docs.celo.org/developer/contractkit",
               label: "ContractKit",
             },
             {
-              to: "/developer/rainbowkit-celo",
+              to: "https://docs.celo.org/developer/rainbowkit-celo",
               label: "Rainbowkit-Celo",
             },
             {
@@ -206,7 +210,7 @@ module.exports = {
           items: [
             {
               label: "Home",
-              to: "/",
+              to: "https://docs.celo.org/",
             },
             {
               label: "Docs GitHub",
@@ -218,7 +222,7 @@ module.exports = {
           title: "Community",
           items: [
             {
-              href: "/community/guidelines",
+              href: "https://docs.celo.org/community/guidelines",
               label: "Contributors",
             },
             {
@@ -290,32 +294,13 @@ module.exports = {
     [
       "@docusaurus/preset-classic",
       {
-        docs: {
-          sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/celo-org/docs/edit/main/",
-          editUrl: ({ locale, versionDocsDirPath, docPath }) => {
-            // Link to Crowdin for French docs
-            if (locale !== DefaultLocale) {
-              return `https://celo.crowdin.com/celo-docs/${locale}`;
-            }
-            // Link to Github for English docs
-            return `https://github.com/celo-org/docs/edit/main/docs/${docPath}`;
-          },
-          routeBasePath: "/",
-          remarkPlugins: [
-            math,
-            [require("@docusaurus/remark-plugin-npm2yarn"), { sync: true }],
-            require("mdx-mermaid"),
-          ],
-          rehypePlugins: [katex],
-        },
-        gtag: {
-          // You can also use your "G-" Measurement ID here.
-          trackingID: "G-0CXEKQ81V2",
-          // Optional fields.
-          anonymizeIP: true, // Should IPs be anonymized?
-        },
+        docs: false,
+        // gtag: {
+        //   // You can also use your "G-" Measurement ID here.
+        //   trackingID: "G-0CXEKQ81V2",
+        //   // Optional fields.
+        //   anonymizeIP: true, // Should IPs be anonymized?
+        // },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),
         },
