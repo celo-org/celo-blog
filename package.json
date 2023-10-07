@@ -45,7 +45,7 @@
     "mermaid": "^9.1.1",
     "net": "^1.0.2",
     "os-browserify": "^0.3.0",
-    "postcss": "^8.4.20",
+    "postcss": "^8.4.31",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-lite-youtube-embed": "^2.2.2",
